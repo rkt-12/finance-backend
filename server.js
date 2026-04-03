@@ -4,6 +4,7 @@ const { runMigrations }  = require('./db/migrations');
 const { errorHandler } = require('./src/middleware/errorHandler');
 const authRoutes = require('./src/routes/auth');
 const userRoutes = require('./src/routes/users');
+const recordRoutes = require('./src/routes/records');
 
 const app = express();
 app.use(express.json());
@@ -12,6 +13,7 @@ app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/records', recordRoutes);
 
 app.use((req, res) => res.status(404).json({ success: false, message: 'Route not found' }));
 app.use(errorHandler);
