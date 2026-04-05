@@ -7,10 +7,11 @@ A role-based finance data management REST API built with Node.js, Express, and S
 ---
 
 ## Environment Variables
+```
 PORT=3000
 JWT_SECRET=your_super_secret_key_change_this
 JWT_EXPIRES_IN=7d
-
+```
 ---
 
 ## Tech Stack
@@ -79,7 +80,7 @@ All dashboard endpoints support optional `?from=YYYY-MM-DD&to=YYYY-MM-DD` filter
 ---
 
 ## Project Structure
-
+```
 src/
 ├── config/       # DB connection, role constants
 ├── middleware/   # auth, authorize, validation, error handler, rate limiter
@@ -91,7 +92,7 @@ db/
 tests/
 ├── unit/         # authService, dashboardService, authorize middleware
 └── integration/  # auth, records, dashboard routes
-
+```
 ---
 
 ---
